@@ -13,8 +13,7 @@
 		3FCD10A9225E8121001AA8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD10A7225E8121001AA8D1 /* LaunchScreen.storyboard */; };
 		3FCD10B1225E81C0001AA8D1 /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD10B0225E81C0001AA8D1 /* SuperHero.swift */; };
 		3FCD10B3225E84DC001AA8D1 /* SuperHerosTVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD10B2225E84DC001AA8D1 /* SuperHerosTVCTableViewController.swift */; };
-		3FCD10B5225E8F4C001AA8D1 /* laureates.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD10B4225E8F4C001AA8D1 /* laureates.json */; };
-		3FCD10B7225E95D8001AA8D1 /* Laureates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD10B6225E95D8001AA8D1 /* Laureates.swift */; };
+		3FCD10B7225E95D8001AA8D1 /* Laureate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD10B6225E95D8001AA8D1 /* Laureate.swift */; };
 		3FCD10B9225E982B001AA8D1 /* LaureatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD10B8225E982B001AA8D1 /* LaureatesTVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +26,7 @@
 		3FCD10AA225E8121001AA8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FCD10B0225E81C0001AA8D1 /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 		3FCD10B2225E84DC001AA8D1 /* SuperHerosTVCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHerosTVCTableViewController.swift; sourceTree = "<group>"; };
-		3FCD10B4225E8F4C001AA8D1 /* laureates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = laureates.json; path = ../../../Downloads/laureates.json; sourceTree = "<group>"; };
-		3FCD10B6225E95D8001AA8D1 /* Laureates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laureates.swift; sourceTree = "<group>"; };
+		3FCD10B6225E95D8001AA8D1 /* Laureate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laureate.swift; sourceTree = "<group>"; };
 		3FCD10B8225E982B001AA8D1 /* LaureatesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureatesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,11 +64,10 @@
 				3FCD10A2225E8120001AA8D1 /* Main.storyboard */,
 				3FCD10A5225E8121001AA8D1 /* Assets.xcassets */,
 				3FCD10A7225E8121001AA8D1 /* LaunchScreen.storyboard */,
-				3FCD10B4225E8F4C001AA8D1 /* laureates.json */,
 				3FCD10AA225E8121001AA8D1 /* Info.plist */,
 				3FCD10B0225E81C0001AA8D1 /* SuperHero.swift */,
 				3FCD10B2225E84DC001AA8D1 /* SuperHerosTVCTableViewController.swift */,
-				3FCD10B6225E95D8001AA8D1 /* Laureates.swift */,
+				3FCD10B6225E95D8001AA8D1 /* Laureate.swift */,
 				3FCD10B8225E982B001AA8D1 /* LaureatesTVC.swift */,
 			);
 			path = SuperHeros_Laureates;
@@ -134,7 +131,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FCD10B5225E8F4C001AA8D1 /* laureates.json in Resources */,
 				3FCD10A9225E8121001AA8D1 /* LaunchScreen.storyboard in Resources */,
 				3FCD10A6225E8121001AA8D1 /* Assets.xcassets in Resources */,
 				3FCD10A4225E8120001AA8D1 /* Main.storyboard in Resources */,
@@ -148,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FCD10B7225E95D8001AA8D1 /* Laureates.swift in Sources */,
+				3FCD10B7225E95D8001AA8D1 /* Laureate.swift in Sources */,
 				3FCD10B3225E84DC001AA8D1 /* SuperHerosTVCTableViewController.swift in Sources */,
 				3FCD109D225E8120001AA8D1 /* AppDelegate.swift in Sources */,
 				3FCD10B9225E982B001AA8D1 /* LaureatesTVC.swift in Sources */,

@@ -12,6 +12,7 @@ class LaureatesTVC: UITableViewController {
     //var powers:[String] = []
     var laureates1 : [[String:Any]]!
     var laureates2:[String:Any]!
+    var laureates3:[Laureate] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchLaureates()
@@ -19,18 +20,28 @@ class LaureatesTVC: UITableViewController {
     
     func fetchLaureates(){
         let urlSession = URLSession.shared
-        let url = URL(string: "https://raw.githubusercontent.com/materialsproject/workshop-2017/master/mongo-primer/nobel_laureates.json")
+        let url = URL(string: "https://www.dropbox.com/s/7dhdrygnd4khgj2/laureates.json?dl=1")
         urlSession.dataTask(with: url!, completionHandler: displayLaureates).resume()
     }
     
     func displayLaureates(data:Data?, urlResponse:URLResponse?, error:Error?)->Void {
-        //print("Inside display super hero method")
+        print("Inside display laureates method")
         do {
             try laureates1 = JSONSerialization.jsonObject(with:data!, options: .allowFragments) as?
                 [[String:Any]]
             for i in 0..<laureates1.count
             {
                 laureates2 = laureates1[i]
+                let id = laureates2["id"] as? String
+                let fname = laureates2["firstname"] as? String
+                let surname = laureates2["surname"] as? String
+                let born = laureates2["born"] as? String
+                let died = laureates2["died"] as? String
+                laureates3.append(Laureate(id: id, firstname: fname, surname: surname, born: born, died: died))
+            }
+            
+            for laur in laureates3{
+                print(laur)
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -48,16 +59,20 @@ class LaureatesTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return laureates2.count
+        return laureates3.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "laureates", for: indexPath)
-        //let laureate = laureates2![indexPath.row]
-        //cell.textLabel?.text = "\(laureate.firstname) \(laureate.surname)"
-        //cell.detailTextLabel?.text = "\(laureate.born) \(laureate.died)"
+        let laureate = laureates3[indexPath.row]
+        
+        let custom1 = cell.viewWithTag(100) as! UILabel
+        let custom2 = cell.viewWithTag(200) as! UILabel
+        
+        custom1.text = "\(laureate.firstname ?? "NA")\(laureate.surname ?? "NA")"
+        custom2.text = "\(laureate.born ?? "NA") \(laureate.died ?? "NA")"
         return cell
     }
-  
+
 }

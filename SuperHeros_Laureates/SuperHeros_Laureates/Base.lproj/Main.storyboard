@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Laureates-->
         <scene sceneID="1Ui-bo-idR">
             <objects>
                 <tableViewController id="oX2-mo-F91" customClass="LaureatesTVC" customModule="SuperHeros_Laureates" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,6 +42,22 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68c-Ol-9o5" id="rSg-yY-q7i">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="      Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ik-bV-14N">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="      Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj1-px-Kda">
+                                            <rect key="frame" x="0.0" y="24" width="375" height="13"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -50,13 +66,13 @@
                             <outlet property="delegate" destination="oX2-mo-F91" id="aau-45-UFw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="PSe-4z-kV0"/>
+                    <tabBarItem key="tabBarItem" title="Laureates" image="icons8-einstein-30" selectedImage="icons8-einstein-30" id="PSe-4z-kV0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whj-P6-dh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="421"/>
+            <point key="canvasLocation" x="949.60000000000002" y="419.64017991004499"/>
         </scene>
-        <!--Item-->
+        <!--Superheros-->
         <scene sceneID="zLw-wW-fwC">
             <objects>
                 <tableViewController id="kwp-Hd-N0v" customClass="SuperHerosTVCTableViewController" customModule="SuperHeros_Laureates" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,11 +111,15 @@
                             <outlet property="delegate" destination="kwp-Hd-N0v" id="h6P-M4-97D"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="qPL-iq-YXJ"/>
+                    <tabBarItem key="tabBarItem" title="Superheros" image="icons8-super-hero-male-30" selectedImage="icons8-super-hero-male-30" id="qPL-iq-YXJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49y-K0-BX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="986" y="-334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-einstein-30" width="30" height="30"/>
+        <image name="icons8-super-hero-male-30" width="30" height="30"/>
+    </resources>
 </document>
